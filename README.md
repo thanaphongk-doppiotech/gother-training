@@ -1,4 +1,4 @@
-Project: gother-training
+# Project: gother-training
 
 Common flow
 
