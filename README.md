@@ -1,5 +1,5 @@
 # Project: gother-training-main
-# Name: your_name
+# Name: <name>
 
 Common flow
 
