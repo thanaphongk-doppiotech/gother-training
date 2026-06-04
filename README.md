@@ -1,4 +1,5 @@
-# Project: gother-training
+# Project: gother-training-main
+# Name: <name>
 
 Common flow
 
