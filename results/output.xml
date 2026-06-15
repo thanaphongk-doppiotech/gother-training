@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.5 on win32)" generated="2026-06-15T18:40:10.991847" rpa="false" schemaversion="5">
+<suite id="s1" name="Gother-Training" source="C:\Users\user.TIG-DEV-038\OneDrive\เอกสาร\Tranning_robot\gother-training\gother-training">
+<suite id="s1-s1" name="Dreamtesting" source="C:\Users\user.TIG-DEV-038\OneDrive\เอกสาร\Tranning_robot\gother-training\gother-training\dreamtesting.robot">
+<test id="s1-s1-t1" name="TC_002 Verify Total Score" line="60">
+<kw name="Calculate Total Score">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-15T18:40:11.193040" level="INFO">${total} = 0</msg>
+<var>${total}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.191984" elapsed="0.001788"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T18:40:11.196320" level="INFO">${score} = 49</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.195454" elapsed="0.001664"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T18:40:11.198932" level="INFO">${total} = 49</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.197510" elapsed="0.002337"/>
+</kw>
+<var name="${student}">{"name":"Geng","score":49}</var>
+<status status="PASS" start="2026-06-15T18:40:11.195051" elapsed="0.005257"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T18:40:11.203013" level="INFO">${score} = 85</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.201850" elapsed="0.002060"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T18:40:11.206209" level="INFO">${total} = 134</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.204475" elapsed="0.002532"/>
+</kw>
+<var name="${student}">{"name":"Dapper","score":85}</var>
+<status status="PASS" start="2026-06-15T18:40:11.200871" elapsed="0.006500"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T18:40:11.210099" level="INFO">${score} = 79</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.209170" elapsed="0.001569"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T18:40:11.212651" level="INFO">${total} = 213</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.211135" elapsed="0.002495"/>
+</kw>
+<var name="${student}">{"name":"Dream","score":79}</var>
+<status status="PASS" start="2026-06-15T18:40:11.207938" elapsed="0.005951"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T18:40:11.215912" level="INFO">${score} = 58</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.215034" elapsed="0.002382"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T18:40:11.220648" level="INFO">${total} = 271</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.218219" elapsed="0.003399"/>
+</kw>
+<var name="${student}">{"name":"Fon","score":58}</var>
+<status status="PASS" start="2026-06-15T18:40:11.214197" elapsed="0.007814"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T18:40:11.224598" level="INFO">${score} = 64</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.223204" elapsed="0.002285"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T18:40:11.227791" level="INFO">${total} = 335</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T18:40:11.226089" elapsed="0.002213"/>
+</kw>
+<var name="${student}">{"name":"Pat","score":64}</var>
+<status status="PASS" start="2026-06-15T18:40:11.222503" elapsed="0.006019"/>
+</iter>
+<var>${student}</var>
+<value>@{students}</value>
+<status status="PASS" start="2026-06-15T18:40:11.194122" elapsed="0.034520"/>
+</for>
+<return>
+<value>${total}</value>
+<status status="PASS" start="2026-06-15T18:40:11.228866" elapsed="0.000305"/>
+</return>
+<msg time="2026-06-15T18:40:11.229531" level="INFO">${total} = 335</msg>
+<var>${total}</var>
+<arg>@{students}</arg>
+<status status="PASS" start="2026-06-15T18:40:11.190234" elapsed="0.040046"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-06-15T18:40:11.234808" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-06-15T18:40:11.235736" level="FAIL">335 != 33</msg>
+<arg>${total}</arg>
+<arg>33</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2026-06-15T18:40:11.232554" elapsed="0.038990">335 != 33</status>
+</kw>
+<status status="FAIL" start="2026-06-15T18:40:11.159114" elapsed="0.113766">335 != 33</status>
+</test>
+<status status="FAIL" start="2026-06-15T18:40:11.121304" elapsed="0.174818"/>
+</suite>
+<status status="FAIL" start="2026-06-15T18:40:11.031951" elapsed="0.286530"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Gother-Training" id="s1" pass="0" fail="1" skip="0">Gother-Training</stat>
+<stat name="Dreamtesting" id="s1-s1" pass="0" fail="1" skip="0">Gother-Training.Dreamtesting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
