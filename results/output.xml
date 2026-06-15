@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-11T10:45:56.225792" rpa="false" schemaversion="5">
+<suite id="s1" name="Gother-Training" source="C:\Users\user.TIG-DEV-006.000\Documents\GitHub\gother-training">
+<suite id="s1-s1" name="0 Hello Fonfon" source="C:\Users\user.TIG-DEV-006.000\Documents\GitHub\gother-training\0_hello_fonfon.robot">
+<test id="s1-s1-t1" name="Test setup and teardown 1" line="21">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Test Case 1</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-11T10:45:56.676974" elapsed="0.000976"/>
+</kw>
+<kw name="My log to console">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-11T10:45:56.679681" elapsed="0.000882"/>
+</kw>
+<arg>hello fonfoneiei</arg>
+<status status="PASS" start="2026-06-11T10:45:56.678927" elapsed="0.001898"/>
+</kw>
+<status status="PASS" start="2026-06-11T10:45:56.673391" elapsed="0.007867"/>
+</test>
+<test id="s1-s1-t2" name="Test setup and teardown 2" line="25">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Test Case 2</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-11T10:45:56.691625" elapsed="0.000517"/>
+</kw>
+<status status="PASS" start="2026-06-11T10:45:56.687564" elapsed="0.004929"/>
+</test>
+<status status="PASS" start="2026-06-11T10:45:56.668182" elapsed="0.036122"/>
+</suite>
+<status status="PASS" start="2026-06-11T10:45:56.234840" elapsed="0.474074"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Gother-Training" id="s1" pass="2" fail="0" skip="0">Gother-Training</stat>
+<stat name="0 Hello Fonfon" id="s1-s1" pass="2" fail="0" skip="0">Gother-Training.0 Hello Fonfon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

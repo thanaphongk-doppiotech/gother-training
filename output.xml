@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-11T11:55:47.604056" rpa="false" schemaversion="5">
+<suite id="s1" name="0 Hello Fonfon" source="C:\Users\user.TIG-DEV-006.000\Documents\GitHub\gother-training\0_hello_fonfon.robot">
+<test id="s1-t1" name="TC1" line="34">
+<kw name="For loop">
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-11T11:55:47.674700" elapsed="0.001124"/>
+</kw>
+<var name="${number}">Shelby</var>
+<status status="PASS" start="2026-06-11T11:55:47.674170" elapsed="0.001847"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-11T11:55:47.676666" elapsed="0.000737"/>
+</kw>
+<var name="${number}">Shelbu</var>
+<status status="PASS" start="2026-06-11T11:55:47.676225" elapsed="0.001273"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-06-11T11:55:47.677802" elapsed="0.000538"/>
+</kw>
+<var name="${number}">Shelboo</var>
+<status status="PASS" start="2026-06-11T11:55:47.677670" elapsed="0.000774"/>
+</iter>
+<var>${number}</var>
+<value>@{employee}</value>
+<status status="PASS" start="2026-06-11T11:55:47.673771" elapsed="0.004742"/>
+</for>
+<status status="PASS" start="2026-06-11T11:55:47.673345" elapsed="0.005325"/>
+</kw>
+<status status="PASS" start="2026-06-11T11:55:47.672225" elapsed="0.007033"/>
+</test>
+<status status="PASS" start="2026-06-11T11:55:47.606330" elapsed="0.074103"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="0 Hello Fonfon" id="s1" pass="1" fail="0" skip="0">0 Hello Fonfon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
