@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.5 on win32)" generated="2026-06-15T19:15:29.314960" rpa="false" schemaversion="5">
+<suite id="s1" name="Dreamtesting" source="C:\Users\user.TIG-DEV-038\OneDrive\เอกสาร\Tranning_robot\gother-training\gother-training\dreamtesting.robot">
+<test id="s1-t1" name="TC_001 Verify Student Grades" line="41">
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.454590" level="INFO">${name} = Geng</msg>
+<var>${name}</var>
+<arg>${student}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.453298" elapsed="0.001449"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.456470" level="INFO">${score} = 49</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.455275" elapsed="0.001286"/>
+</kw>
+<kw name="Calculate Grade">
+<if>
+<branch type="IF" condition="${score} &gt;= 80">
+<return>
+<value>A</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.458248" elapsed="0.000032"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.457836" elapsed="0.000523"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 70">
+<return>
+<value>B</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.458662" elapsed="0.000024"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.458407" elapsed="0.000334"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 60">
+<return>
+<value>C</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.458945" elapsed="0.000021"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.458776" elapsed="0.000238"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 50">
+<return>
+<value>D</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.459195" elapsed="0.000017"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.459048" elapsed="0.000205"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>F</value>
+<status status="PASS" start="2026-06-15T19:15:29.459350" elapsed="0.000069"/>
+</return>
+<status status="PASS" start="2026-06-15T19:15:29.459286" elapsed="0.000192"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.457781" elapsed="0.001753"/>
+</if>
+<msg time="2026-06-15T19:15:29.459747" level="INFO">${grade} = F</msg>
+<var>${grade}</var>
+<arg>${score}</arg>
+<status status="PASS" start="2026-06-15T19:15:29.457193" elapsed="0.002598"/>
+</kw>
+<if>
+<branch type="IF" condition="'${name}' == 'Geng'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>F</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.460232" elapsed="0.000795"/>
+</kw>
+<status status="PASS" start="2026-06-15T19:15:29.459926" elapsed="0.001195"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dapper'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>A</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.461366" elapsed="0.000037"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.461171" elapsed="0.000296"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dream'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>B</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.461683" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.461545" elapsed="0.000224"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Fon'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>D</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.461922" elapsed="0.000028"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.461803" elapsed="0.000196"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Pat'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>C</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.462149" elapsed="0.000027"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.462032" elapsed="0.000200"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.459891" elapsed="0.002372"/>
+</if>
+<var name="${student}">{"name":"Geng","score":49}</var>
+<status status="PASS" start="2026-06-15T19:15:29.450563" elapsed="0.011746"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.463617" level="INFO">${name} = Dapper</msg>
+<var>${name}</var>
+<arg>${student}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.463092" elapsed="0.000689"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.464408" level="INFO">${score} = 85</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.463991" elapsed="0.000465"/>
+</kw>
+<kw name="Calculate Grade">
+<if>
+<branch type="IF" condition="${score} &gt;= 80">
+<return>
+<value>A</value>
+<status status="PASS" start="2026-06-15T19:15:29.465755" elapsed="0.000070"/>
+</return>
+<status status="PASS" start="2026-06-15T19:15:29.465427" elapsed="0.000590"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 70">
+<return>
+<value>B</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.466135" elapsed="0.000018"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.466065" elapsed="0.000131"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 60">
+<return>
+<value>C</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.466285" elapsed="0.000015"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.466238" elapsed="0.000105"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 50">
+<return>
+<value>D</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.466423" elapsed="0.000015"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.466373" elapsed="0.000102"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>F</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.466565" elapsed="0.000019"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.466517" elapsed="0.000107"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.465390" elapsed="0.001263"/>
+</if>
+<msg time="2026-06-15T19:15:29.466859" level="INFO">${grade} = A</msg>
+<var>${grade}</var>
+<arg>${score}</arg>
+<status status="PASS" start="2026-06-15T19:15:29.464965" elapsed="0.001937"/>
+</kw>
+<if>
+<branch type="IF" condition="'${name}' == 'Geng'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>F</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.467349" elapsed="0.000194"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.467017" elapsed="0.000598"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dapper'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>A</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.467950" elapsed="0.000863"/>
+</kw>
+<status status="PASS" start="2026-06-15T19:15:29.467659" elapsed="0.001236"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dream'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>B</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.469107" elapsed="0.000032"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.468941" elapsed="0.000299"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Fon'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>D</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.469421" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.469281" elapsed="0.000247"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Pat'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>C</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.469690" elapsed="0.000028"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.469565" elapsed="0.000203"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.466993" elapsed="0.002809"/>
+</if>
+<var name="${student}">{"name":"Dapper","score":85}</var>
+<status status="PASS" start="2026-06-15T19:15:29.462912" elapsed="0.006933"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.470800" level="INFO">${name} = Dream</msg>
+<var>${name}</var>
+<arg>${student}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.470322" elapsed="0.000529"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.471377" level="INFO">${score} = 79</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.471020" elapsed="0.000399"/>
+</kw>
+<kw name="Calculate Grade">
+<if>
+<branch type="IF" condition="${score} &gt;= 80">
+<return>
+<value>A</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.472589" elapsed="0.000028"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.472321" elapsed="0.000361"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 70">
+<return>
+<value>B</value>
+<status status="PASS" start="2026-06-15T19:15:29.472903" elapsed="0.000055"/>
+</return>
+<status status="PASS" start="2026-06-15T19:15:29.472721" elapsed="0.000298"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 60">
+<return>
+<value>C</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.473125" elapsed="0.000016"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.473058" elapsed="0.000125"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 50">
+<return>
+<value>D</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.473258" elapsed="0.000015"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.473213" elapsed="0.000097"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>F</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.473384" elapsed="0.000016"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.473339" elapsed="0.000098"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.472277" elapsed="0.001191"/>
+</if>
+<msg time="2026-06-15T19:15:29.473660" level="INFO">${grade} = B</msg>
+<var>${grade}</var>
+<arg>${score}</arg>
+<status status="PASS" start="2026-06-15T19:15:29.471869" elapsed="0.001835"/>
+</kw>
+<if>
+<branch type="IF" condition="'${name}' == 'Geng'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>F</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.474239" elapsed="0.000035"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.473810" elapsed="0.000531"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dapper'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>A</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.474674" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.474379" elapsed="0.000385"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dream'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>B</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.475030" elapsed="0.000605"/>
+</kw>
+<status status="PASS" start="2026-06-15T19:15:29.474800" elapsed="0.000909"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Fon'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>D</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.475909" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.475749" elapsed="0.000242"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Pat'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>C</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.476147" elapsed="0.000027"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.476026" elapsed="0.000197"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.473787" elapsed="0.002468"/>
+</if>
+<var name="${student}">{"name":"Dream","score":79}</var>
+<status status="PASS" start="2026-06-15T19:15:29.470203" elapsed="0.006092"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.477296" level="INFO">${name} = Fon</msg>
+<var>${name}</var>
+<arg>${student}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.476764" elapsed="0.000586"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.477926" level="INFO">${score} = 58</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.477555" elapsed="0.000416"/>
+</kw>
+<kw name="Calculate Grade">
+<if>
+<branch type="IF" condition="${score} &gt;= 80">
+<return>
+<value>A</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.479939" elapsed="0.000046"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.479532" elapsed="0.000574"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 70">
+<return>
+<value>B</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.480536" elapsed="0.000039"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.480178" elapsed="0.000487"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 60">
+<return>
+<value>C</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.481037" elapsed="0.000038"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.480736" elapsed="0.000430"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 50">
+<return>
+<value>D</value>
+<status status="PASS" start="2026-06-15T19:15:29.481532" elapsed="0.000094"/>
+</return>
+<status status="PASS" start="2026-06-15T19:15:29.481232" elapsed="0.000498"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>F</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.481899" elapsed="0.000035"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.481804" elapsed="0.000208"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.479459" elapsed="0.002619"/>
+</if>
+<msg time="2026-06-15T19:15:29.482402" level="INFO">${grade} = D</msg>
+<var>${grade}</var>
+<arg>${score}</arg>
+<status status="PASS" start="2026-06-15T19:15:29.478412" elapsed="0.004108"/>
+</kw>
+<if>
+<branch type="IF" condition="'${name}' == 'Geng'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>F</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.483271" elapsed="0.000063"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.482740" elapsed="0.000706"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dapper'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>A</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.484027" elapsed="0.000058"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.483572" elapsed="0.000631"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dream'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>B</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.484831" elapsed="0.000062"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.484275" elapsed="0.000738"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Fon'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>D</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.485549" elapsed="0.001056"/>
+</kw>
+<status status="PASS" start="2026-06-15T19:15:29.485086" elapsed="0.001658"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Pat'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>C</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.487072" elapsed="0.000055"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.486819" elapsed="0.000411"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.482691" elapsed="0.004606"/>
+</if>
+<var name="${student}">{"name":"Fon","score":58}</var>
+<status status="PASS" start="2026-06-15T19:15:29.476646" elapsed="0.010739"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.488863" level="INFO">${name} = Pat</msg>
+<var>${name}</var>
+<arg>${student}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.488183" elapsed="0.000762"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.489963" level="INFO">${score} = 64</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.489227" elapsed="0.000852"/>
+</kw>
+<kw name="Calculate Grade">
+<if>
+<branch type="IF" condition="${score} &gt;= 80">
+<return>
+<value>A</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.492400" elapsed="0.000187"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.491789" elapsed="0.001008"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 70">
+<return>
+<value>B</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.493393" elapsed="0.000048"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.492889" elapsed="0.000655"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 60">
+<return>
+<value>C</value>
+<status status="PASS" start="2026-06-15T19:15:29.494081" elapsed="0.000128"/>
+</return>
+<status status="PASS" start="2026-06-15T19:15:29.493628" elapsed="0.000711"/>
+</branch>
+<branch type="ELSE IF" condition="${score} &gt;= 50">
+<return>
+<value>D</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.494545" elapsed="0.000038"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.494423" elapsed="0.000370"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>F</value>
+<status status="NOT RUN" start="2026-06-15T19:15:29.495026" elapsed="0.000046"/>
+</return>
+<status status="NOT RUN" start="2026-06-15T19:15:29.494891" elapsed="0.000273"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.491723" elapsed="0.003515"/>
+</if>
+<msg time="2026-06-15T19:15:29.495691" level="INFO">${grade} = C</msg>
+<var>${grade}</var>
+<arg>${score}</arg>
+<status status="PASS" start="2026-06-15T19:15:29.490983" elapsed="0.004802"/>
+</kw>
+<if>
+<branch type="IF" condition="'${name}' == 'Geng'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>F</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.496642" elapsed="0.000063"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.496014" elapsed="0.000807"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dapper'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>A</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.497383" elapsed="0.000061"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.496890" elapsed="0.000682"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Dream'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>B</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.498160" elapsed="0.000064"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.497648" elapsed="0.000733"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Fon'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>D</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2026-06-15T19:15:29.498904" elapsed="0.000053"/>
+</kw>
+<status status="NOT RUN" start="2026-06-15T19:15:29.498452" elapsed="0.000612"/>
+</branch>
+<branch type="ELSE IF" condition="'${name}' == 'Pat'">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${grade}</arg>
+<arg>C</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.499552" elapsed="0.001058"/>
+</kw>
+<status status="PASS" start="2026-06-15T19:15:29.499131" elapsed="0.001608"/>
+</branch>
+<status status="PASS" start="2026-06-15T19:15:29.495961" elapsed="0.004851"/>
+</if>
+<var name="${student}">{"name":"Pat","score":64}</var>
+<status status="PASS" start="2026-06-15T19:15:29.487972" elapsed="0.012922"/>
+</iter>
+<var>${student}</var>
+<value>@{students}</value>
+<status status="PASS" start="2026-06-15T19:15:29.449295" elapsed="0.051712"/>
+</for>
+<status status="PASS" start="2026-06-15T19:15:29.447180" elapsed="0.054639"/>
+</test>
+<test id="s1-t2" name="TC_002 Verify Total Score" line="60">
+<kw name="Calculate Total Score">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-15T19:15:29.506758" level="INFO">${total} = 0</msg>
+<var>${total}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.505843" elapsed="0.001010"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.508438" level="INFO">${score} = 49</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.507708" elapsed="0.000824"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T19:15:29.511636" level="INFO">${total} = 49</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.508889" elapsed="0.002963"/>
+</kw>
+<var name="${student}">{"name":"Geng","score":49}</var>
+<status status="PASS" start="2026-06-15T19:15:29.507475" elapsed="0.004578"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.513958" level="INFO">${score} = 85</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.512853" elapsed="0.001232"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T19:15:29.516203" level="INFO">${total} = 134</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.514606" elapsed="0.001728"/>
+</kw>
+<var name="${student}">{"name":"Dapper","score":85}</var>
+<status status="PASS" start="2026-06-15T19:15:29.512485" elapsed="0.004110"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.518293" level="INFO">${score} = 79</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.517314" elapsed="0.001071"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T19:15:29.520032" level="INFO">${total} = 213</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.518737" elapsed="0.001398"/>
+</kw>
+<var name="${student}">{"name":"Dream","score":79}</var>
+<status status="PASS" start="2026-06-15T19:15:29.517000" elapsed="0.003253"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.521960" level="INFO">${score} = 58</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.520957" elapsed="0.001110"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T19:15:29.523228" level="INFO">${total} = 271</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.522353" elapsed="0.000932"/>
+</kw>
+<var name="${student}">{"name":"Fon","score":58}</var>
+<status status="PASS" start="2026-06-15T19:15:29.520571" elapsed="0.002789"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-06-15T19:15:29.524116" level="INFO">${score} = 64</msg>
+<var>${score}</var>
+<arg>${student}</arg>
+<arg>score</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.523697" elapsed="0.000465"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-06-15T19:15:29.524946" level="INFO">${total} = 335</msg>
+<var>${total}</var>
+<arg>${total} + ${score}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.524332" elapsed="0.000683"/>
+</kw>
+<var name="${student}">{"name":"Pat","score":64}</var>
+<status status="PASS" start="2026-06-15T19:15:29.523547" elapsed="0.001534"/>
+</iter>
+<var>${student}</var>
+<value>@{students}</value>
+<status status="PASS" start="2026-06-15T19:15:29.507065" elapsed="0.018071"/>
+</for>
+<return>
+<value>${total}</value>
+<status status="PASS" start="2026-06-15T19:15:29.525222" elapsed="0.000064"/>
+</return>
+<msg time="2026-06-15T19:15:29.525481" level="INFO">${total} = 335</msg>
+<var>${total}</var>
+<arg>@{students}</arg>
+<status status="PASS" start="2026-06-15T19:15:29.504954" elapsed="0.020568"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-06-15T19:15:29.527612" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${total}</arg>
+<arg>335</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-06-15T19:15:29.526460" elapsed="0.001387"/>
+</kw>
+<status status="PASS" start="2026-06-15T19:15:29.503700" elapsed="0.025028"/>
+</test>
+<status status="PASS" start="2026-06-15T19:15:29.320277" elapsed="0.210670"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Dreamtesting" id="s1" pass="2" fail="0" skip="0">Dreamtesting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
