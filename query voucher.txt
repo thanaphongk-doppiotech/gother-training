@@ -1,0 +1,58 @@
+SELECT
+  DATETIME(
+    TIMESTAMP_MICROS(event_timestamp),
+    'Asia/Bangkok'
+  ) AS event_time_bkk,
+
+  user_pseudo_id,
+
+  (SELECT value.int_value
+   FROM UNNEST(event_params)
+   WHERE key = 'ga_session_id') AS ga_session_id,
+
+  (SELECT value.string_value
+   FROM UNNEST(event_params)
+   WHERE key = 'session_id') AS session_id,
+
+  (SELECT value.string_value
+   FROM UNNEST(event_params)
+   WHERE key = 'client_id') AS client_id,
+
+  (SELECT value.string_value
+   FROM UNNEST(event_params)
+   WHERE key = 'action_type') AS action_type,
+
+  (SELECT value.string_value
+   FROM UNNEST(event_params)
+   WHERE key = 'product_type') AS product_type,
+
+  (SELECT value.string_value
+   FROM UNNEST(event_params)
+   WHERE key = 'transaction_id') AS transaction_id,
+
+  (SELECT value.string_value
+   FROM UNNEST(event_params)
+   WHERE key = 'event_detail') AS event_detail,
+
+  (SELECT value.string_value
+   FROM UNNEST(event_params)
+   WHERE key = 'event_result') AS event_result,
+
+  (SELECT value.string_value
+   FROM UNNEST(event_params)
+   WHERE key = 'event_description') AS event_description
+
+FROM `traveligo-dev-rawdata.analytics_506564882.events_intraday_*`
+
+WHERE
+  _TABLE_SUFFIX = FORMAT_DATE('%Y%m%d', CURRENT_DATE('Asia/Bangkok'))
+  AND event_name = 'payment_interaction'
+  AND user_pseudo_id = '1646390856.1764300679'
+  AND (
+    SELECT value.string_value
+    FROM UNNEST(event_params)
+    WHERE key = 'action_type'
+  ) = 'apply_gother-voucher'
+
+
+ORDER BY event_timestamp DESC;
